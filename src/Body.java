@@ -137,6 +137,11 @@ public class Body {
 		return F*((deltaY)/r);
 	}
 	
+	/**
+	 * calculates the net xforce exerted by one body on another
+	 * @param p
+	 * @return the net xforce exerted by one body on another
+	 */
 	public double calcNetForceExertedByX(Body[] bodies){
 		double netX = 0.0;
 		for(Body b: bodies){
@@ -147,6 +152,11 @@ public class Body {
 		return netX;
 	}
 	
+	/**
+	 * calculates the net yforce exerted by one body on another
+	 * @param p
+	 * @return the net yforce exerted by one body on another
+	 */
 	public double calcNetForceExertedByY(Body[] bodies){
 		double netY = 0.0;
 		for(Body b: bodies){
@@ -175,7 +185,9 @@ public class Body {
 		myXVel = nvx;
 		myYVel = nvy;
 	}
-	
+	/**
+	*draws the simulation
+	*/
 	public void draw(){
 		StdDraw.picture(myXPos, myYPos, "images/" + myFileName);
 	}
